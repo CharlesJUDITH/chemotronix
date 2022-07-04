@@ -1,0 +1,33 @@
+accounts:
+  - name: alice
+    coins: ["20000token", "200000000chmtx"]
+  - name: bob
+    coins: ["10000token", "100000000chmtx"]
+validator:
+  name: alice
+  staked: "100000000chmtx"
+client:
+  openapi:
+    path: "docs/static/openapi.yml"
+  vuex:
+    path: "vue/src/store"
+faucet:
+  name: bob
+  coins: ["5token", "100000chmtx"]
+genesis:
+  chain_id: chemotronix-1
+  app_state:
+    staking:
+      params:
+        bond_denom: "chmtx"
+    crisis:
+      constant_fee:
+        denom: "chmtx"
+    gov:
+      deposit_params:
+        min_deposit:
+          - "amount": "1"
+            "denom": "chmtx"
+    mint:
+      params:
+        mint_denom: "chmtx"
